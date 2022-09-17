@@ -3,11 +3,13 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import NavigationBar from './components/NavigationBar.vue';
 import AboutPlatform from './components/AboutPlatform.vue';
+import Advantages from './components/Advantages.vue';
 </script>
 
 <template>
   <div class="md:w-[1160px]">
     <NavigationBar />
     <AboutPlatform />
+    <Advantages />
   </div>
 </template>

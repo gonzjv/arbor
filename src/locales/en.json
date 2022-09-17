@@ -10,5 +10,20 @@
   "aboutPlatform": {
     "text": "A highly functional project with an open source code for creating modern decentralized financial solutions supporting green projects",
     "try": "Try it"
+  },
+  "advantages": {
+    "header": "Advantages",
+    "speed": {
+      "header": "Transaction processing speed",
+      "text": "The network has the maximum throughput, due to this, the transaction processing speed is increased and the delay is reduced"
+    },
+    "security": {
+      "header": "Network security",
+      "text": "We use one of the most popular coding alphabets, which ensures complete security of the network and users (the Bitcoin network has a similar encryption system)"
+    },
+    "simplicity": {
+      "header": "Simplicity of implementation",
+      "text": "The ability to create smart contracts, simple and easy conditions for business entry into the project"
+    }
   }
 }
