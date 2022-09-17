@@ -1,10 +1,17 @@
-<script setup></script>
+<script setup>
+import treeImg from '@/assets/tree.png';
+</script>
 <template>
   <main class="h-[680px] relative">
+    <img
+      class="absolute -bottom-14 -right-32 z-0"
+      :src="treeImg"
+      alt=""
+    />
     <article
       class="absolute bottom-32 left-0 flex flex-col items-start gap-3"
     >
-      <h2 class="text-6xl">ARBOR PLATFORM</h2>
+      <h2 class="text-5xl">ARBOR PLATFORM</h2>
       <p class="w-96 text-left text-lg">
         {{ $t('aboutPlatform.text') }}
       </p>

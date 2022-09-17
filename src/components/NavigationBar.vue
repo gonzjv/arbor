@@ -1,5 +1,5 @@
 <script setup>
-import logoImg from './../assets/logo.svg';
+import logoImg from '@/assets/logo.svg';
 import Circle from './svg/Circle.vue';
 
 const NAV_BUTTONS = [
@@ -28,7 +28,7 @@ const NAV_BUTTONS = [
       </h1>
     </section>
     <section class="flex gap-16">
-      <nav class="">
+      <nav class="z-10">
         <ul
           class="relative flex justify-center gap-1 border-b-green-400 border-b-2 h-10"
         >
@@ -46,7 +46,7 @@ const NAV_BUTTONS = [
           </li>
         </ul>
       </nav>
-      <form class="">
+      <form class="z-10">
         <label for="locale-select"></label>
         <select
           class="bg-green-800 text-xs rounded-full h-9"
