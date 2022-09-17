@@ -1,4 +1,5 @@
 {
+  "language": "Language",
   "navigation": {
     "platform": "About platform",
     "advantages": "Advantages",
@@ -6,5 +7,8 @@
     "partners": "Partners",
     "contacts": "Contacts"
   },
-  "language": "Language"
+  "aboutPlatform": {
+    "text": "A highly functional project with an open source code for creating modern decentralized financial solutions supporting green projects",
+    "try": "Try it"
+  }
 }
