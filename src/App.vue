@@ -5,5 +5,7 @@ import NavigationBar from './components/NavigationBar.vue';
 </script>
 
 <template>
-  <NavigationBar />
+  <div class="md:w-[1160px]">
+    <NavigationBar />
+  </div>
 </template>
