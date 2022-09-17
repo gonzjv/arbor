@@ -1,8 +1,10 @@
 {
   "navigation": {
-    "platform": "Platform",
+    "platform": "About platform",
     "advantages": "Advantages",
-    "ecosystem": "Ecosystem"
+    "ecosystem": "Ecosystem",
+    "partners": "Partners",
+    "contacts": "Contacts"
   },
   "language": "Language"
 }

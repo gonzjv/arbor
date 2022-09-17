@@ -1,8 +1,10 @@
 {
   "navigation": {
-    "platform": "Платформа",
+    "platform": " О платформе",
     "advantages": "Преимущества",
-    "ecosystem": "Экосистема"
+    "ecosystem": "Экосистема",
+    "partners": "Партнеры",
+    "contacts": "Контакты"
   },
   "language": "Язык"
 }
