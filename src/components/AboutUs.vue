@@ -4,7 +4,7 @@ import aboutUsImg from '@/assets/about-us.svg';
 <template>
   <section class="flex justify-between">
     <article
-      class="h-[700px] w-1/2 flex flex-col items-start justify-center gap-5"
+      class="h-[700px] w-1/2 flex flex-col items-start border-b border-b-green-400 justify-center gap-5"
     >
       <h2 class="text-5xl">
         {{ $t('aboutUs.header') }}

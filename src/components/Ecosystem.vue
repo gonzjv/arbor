@@ -11,10 +11,13 @@ const PRODUCTS = [
 </script>
 <template>
   <section
-    class="flex gap-5 bg-gray-50 text-gray-800"
+    class="relative flex gap-5 bg-gray-50 text-gray-800"
   >
+    <aside
+      class="absolute top-0 -left-36 bg-gray-50 w-[1440px] h-full -z-10"
+    ></aside>
     <div
-      class="pl-24 my-36 flex flex-col items-start w-1/2"
+      class="my-36 flex flex-col items-start w-1/2"
     >
       <h2 class="text-5xl">
         {{ $t('ecosystem.header') }}
