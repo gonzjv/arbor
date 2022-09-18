@@ -30,5 +30,10 @@
   "ecosystem": {
     "header": "Ecosystem",
     "description": "The ecosystem includes many projects and products developed by the community"
+  },
+  "aboutUs": {
+    "header": "About Us",
+    "descriptionStart": "Launched in 2020, Arbor is a global open source platform for decentralized applications. Based on the Proof-of-Stake consensus, Arbor strives to maximize the use of blockchain and implement it in all spheres of life.",
+    "descriptionEnd": "The Arbor technology stack can be useful in any use cases that require security and decentralization — open finance, identity identification, games, confidential data, and many others"
   }
 }
