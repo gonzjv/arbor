@@ -51,7 +51,7 @@ const advantagesArr = [
         </figcaption>
       </figure>
     </article>
-    <article class="flex gap-24">
+    <article class="flex gap-24 mb-10">
       <figure class="min-w-max">
         <img :src="supportImg" alt="" />
       </figure>

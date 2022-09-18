@@ -4,6 +4,7 @@
 import NavigationBar from './components/NavigationBar.vue';
 import AboutPlatform from './components/AboutPlatform.vue';
 import Advantages from './components/Advantages.vue';
+import Ecosystem from './components/Ecosystem.vue';
 </script>
 
 <template>
@@ -11,5 +12,6 @@ import Advantages from './components/Advantages.vue';
     <NavigationBar />
     <AboutPlatform />
     <Advantages />
+    <Ecosystem />
   </div>
 </template>

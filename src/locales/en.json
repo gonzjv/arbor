@@ -26,5 +26,9 @@
       "text": "The ability to create smart contracts, simple and easy conditions for business entry into the project"
     },
     "purpose": "One of the main goals of the platform is to support green projects. When certain capitalization levels are reached, part of the profit will be used to finance such projects"
+  },
+  "ecosystem": {
+    "header": "Ecosystem",
+    "description": "The ecosystem includes many projects and products developed by the community"
   }
 }
