@@ -2,6 +2,7 @@
 import speedImg from '@/assets/speed.svg';
 import securityImg from '@/assets/security.svg';
 import simplicityImg from '@/assets/simplicity.svg';
+import supportImg from '@/assets/support.svg';
 
 const advantagesArr = [
   {
@@ -23,7 +24,7 @@ const advantagesArr = [
 </script>
 <template>
   <section
-    class="flex flex-col items-start gap-5 mt-52"
+    class="flex flex-col items-start gap-14 mt-52"
   >
     <h2 class="text-5xl">
       {{ $t('advantages.header') }}
@@ -49,6 +50,16 @@ const advantagesArr = [
           </p>
         </figcaption>
       </figure>
+    </article>
+    <article class="flex gap-24">
+      <figure class="min-w-max">
+        <img :src="supportImg" alt="" />
+      </figure>
+      <h4
+        class="text-3xl text-left font-semibold flex items-center border-t-2 border-green-400"
+      >
+        {{ $t('advantages.purpose') }}
+      </h4>
     </article>
   </section>
 </template>
