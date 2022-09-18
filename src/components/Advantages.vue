@@ -24,7 +24,7 @@ const advantagesArr = [
 </script>
 <template>
   <section
-    class="flex flex-col items-start gap-14 mt-52"
+    class="flex flex-col items-start gap-14 mt-52 px-[140px]"
   >
     <h2 class="text-5xl">
       {{ $t('advantages.header') }}

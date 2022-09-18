@@ -9,7 +9,7 @@ import AboutUs from './components/AboutUs.vue';
 </script>
 
 <template>
-  <div class="md:w-[1160px]">
+  <div class="md:w-[1440px] overflow-hidden">
     <NavigationBar />
     <AboutPlatform />
     <Advantages />

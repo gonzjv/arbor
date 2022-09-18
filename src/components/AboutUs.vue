@@ -2,7 +2,9 @@
 import aboutUsImg from '@/assets/about-us.svg';
 </script>
 <template>
-  <section class="flex justify-between">
+  <section
+    class="flex justify-between px-[140px]"
+  >
     <article
       class="h-[700px] w-1/2 flex flex-col items-start border-b border-b-green-400 justify-center gap-5"
     >
