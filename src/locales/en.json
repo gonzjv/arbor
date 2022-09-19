@@ -50,5 +50,12 @@
       "title": "Magnet",
       "description": "We have developed a system for monitoring and accounting of discount cards, and also implemented it in the blockchain"
     }
+  },
+  "statistics": {
+    "header": "Statistics",
+    "accounts": "Number of accounts",
+    "blocks": "Generated blocks",
+    "transactions": "Number of transactions",
+    "amount": "Our token transaction amount "
   }
 }
