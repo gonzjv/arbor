@@ -6,6 +6,7 @@ import AboutPlatform from './components/AboutPlatform.vue';
 import Advantages from './components/Advantages.vue';
 import Ecosystem from './components/Ecosystem.vue';
 import AboutUs from './components/AboutUs.vue';
+import Partners from './components/Partners.vue';
 </script>
 
 <template>
@@ -15,5 +16,6 @@ import AboutUs from './components/AboutUs.vue';
     <Advantages />
     <Ecosystem />
     <AboutUs />
+    <Partners />
   </div>
 </template>

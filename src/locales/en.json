@@ -35,5 +35,20 @@
     "header": "About Us",
     "descriptionStart": "Launched in 2020, Arbor is a global open source platform for decentralized applications. Based on the Proof-of-Stake consensus, Arbor strives to maximize the use of blockchain and implement it in all spheres of life.",
     "descriptionEnd": "The Arbor technology stack can be useful in any use cases that require security and decentralization — open finance, identity identification, games, confidential data, and many others"
+  },
+  "partners": {
+    "header": "About Us",
+    "aquaWorld": {
+      "title": "Aqua World",
+      "description": "Our partner, for whom we have developed a database and accounting system based on blockchain"
+    },
+    "prestige": {
+      "title": "Prestige",
+      "description": "We have developed and implemented a security system based on our blockchain"
+    },
+    "magnet": {
+      "title": "Magnet",
+      "description": "We have developed a system for monitoring and accounting of discount cards, and also implemented it in the blockchain"
+    }
   }
 }
