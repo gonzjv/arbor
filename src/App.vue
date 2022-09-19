@@ -8,6 +8,7 @@ import Ecosystem from './components/Ecosystem.vue';
 import AboutUs from './components/AboutUs.vue';
 import Partners from './components/Partners.vue';
 import Statistics from './components/Statistics.vue';
+import Network from './components/Network.vue';
 </script>
 
 <template>
@@ -19,5 +20,6 @@ import Statistics from './components/Statistics.vue';
     <AboutUs />
     <Partners />
     <Statistics />
+    <Network />
   </div>
 </template>

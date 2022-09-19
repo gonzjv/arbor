@@ -57,5 +57,9 @@
     "blocks": "Generated blocks",
     "transactions": "Number of transactions",
     "amount": "Our token transaction amount "
+  },
+  "network": {
+    "arbor": "Arbor's decentralized network is built on the most secure, secure blockchain network. Recording to the network is extremely cheap – $ 0.01, and the processing speed is almost instant.",
+    "node": "The Node system is scattered all over the world, which gives the continuity and reliability of the network. Using the Arbor network, you will be sure that your data is safe and, if necessary, you will receive your transaction faster than anyone else."
   }
 }

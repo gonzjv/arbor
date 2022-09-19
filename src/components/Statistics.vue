@@ -30,7 +30,7 @@ const STATS = [
         <p class="text-xl">
           {{ $t(stat.term) }}
         </p>
-        <dd class="text-5xl font-bold">{{$t(stat.number)}}</dd>
+        <dd class="text-5xl font-bold">{{stat.number}}</dd>
       </dt>
     </dl>
   </section>
