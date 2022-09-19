@@ -22,20 +22,31 @@ const partners = [
 ];
 </script>
 <template>
-  <section>
-    <h2>
+  <section
+    class="flex flex-col px-[140px] my-36 gap-10"
+  >
+    <h2 class="text-5xl text-left">
       {{ $t('partners.header') }}
     </h2>
-    <article v-for="partner in partners">
-      <figure>
-        <img
-          :src="partner.img"
-          :alt="$t(partner.title)"
-        />
-        <figcaption>
+    <div class="flex gap-5">
+      <figure
+        class="bg-gray-800 rounded-3xl w-96 h-64 flex flex-col justify-center items-center"
+        v-for="partner in partners"
+      >
+        <div
+          class="h-1/2 flex justify-start items-center w-full ml-20"
+        >
+          <img
+            :src="partner.img"
+            :alt="$t(partner.title)"
+          />
+        </div>
+        <figcaption
+          class="text-left w-72 h-1/2 flex items-start"
+        >
           {{ $t(partner.description) }}
         </figcaption>
       </figure>
-    </article>
+    </div>
   </section>
 </template>

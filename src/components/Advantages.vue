@@ -35,7 +35,7 @@ const advantagesArr = [
         class="flex flex-col w-64 gap-7"
       >
         <div
-          class="w-64 h-64 flex items-center justify-center bg-gray-700 rounded-3xl"
+          class="w-64 h-64 flex items-center justify-center bg-gray-800 rounded-3xl"
         >
           <img class="" :src="adv.img" alt="" />
         </div>
