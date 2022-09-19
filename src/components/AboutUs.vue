@@ -3,10 +3,10 @@ import aboutUsImg from '@/assets/about-us.svg';
 </script>
 <template>
   <section
-    class="flex justify-between px-[140px]"
+    class="flex items-end justify-between px-[140px] h-[600px]"
   >
     <article
-      class="h-[700px] w-1/2 flex flex-col items-start border-b border-b-green-400 justify-center gap-5"
+      class="h-2/3 w-1/2 flex flex-col items-start border-b border-b-green-400 justify-center gap-5"
     >
       <h2 class="text-5xl">
         {{ $t('aboutUs.header') }}
