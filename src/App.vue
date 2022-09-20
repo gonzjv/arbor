@@ -11,9 +11,21 @@ import Statistics from './components/Statistics.vue';
 import Network from './components/Network.vue';
 import SocialNetworks from './components/SocialNetworks.vue';
 import Footer from './Footer.vue';
+import { ref, onMounted } from 'vue';
+
+const child = ref(null);
+
+const goToChild = () => {
+  console.log('child', child.value);
+  child.value.$el.scrollIntoView({
+    behavior: 'smooth',
+  });
+  // child.value.focus();
+};
 </script>
 
 <template>
+  <button @click="goToChild">Go To Child</button>
   <div class="md:w-[1440px] overflow-hidden">
     <NavigationBar />
     <AboutPlatform />
@@ -22,7 +34,7 @@ import Footer from './Footer.vue';
     <AboutUs />
     <Partners />
     <Statistics />
-    <Network />
+    <Network ref="child" />
     <SocialNetworks />
     <Footer />
   </div>
