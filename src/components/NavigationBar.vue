@@ -2,12 +2,31 @@
 import logoImg from '@/assets/logo.svg';
 import Circle from './svg/Circle.vue';
 
+const props = defineProps({
+  goTo: Function,
+});
+
 const NAV_BUTTONS = [
-  'navigation.platform',
-  'navigation.advantages',
-  'navigation.ecosystem',
-  'navigation.partners',
-  'navigation.contacts',
+  {
+    title: 'navigation.platform',
+    destination: 'aboutElem',
+  },
+  {
+    title: 'navigation.advantages',
+    destination: 'advantagesElem',
+  },
+  {
+    title: 'navigation.ecosystem',
+    destination: 'ecosystemElem',
+  },
+  {
+    title: 'navigation.partners',
+    destination: 'partnersElem',
+  },
+  {
+    title: 'navigation.contacts',
+    destination: 'contactsElem',
+  },
 ];
 </script>
 
@@ -40,9 +59,13 @@ const NAV_BUTTONS = [
           />
           <li
             class="w-32"
-            v-for="btn in NAV_BUTTONS"
+            v-for="nav in NAV_BUTTONS"
           >
-            {{ $t(btn) }}
+            <button
+              @click="props.goTo(nav.destination)"
+            >
+              {{ $t(nav.title) }}
+            </button>
           </li>
         </ul>
       </nav>

@@ -13,29 +13,41 @@ import SocialNetworks from './components/SocialNetworks.vue';
 import Footer from './Footer.vue';
 import { ref, onMounted } from 'vue';
 
-const child = ref(null);
+const advantagesElem = ref(null);
+const ecosystemElem = ref(null);
+const aboutElem = ref(null);
+const partnersElem = ref(null);
+const contactsElem = ref(null);
 
-const goToChild = () => {
-  console.log('child', child.value);
-  child.value.$el.scrollIntoView({
+const goToChild = (elem) => {
+  const elemToGo =
+    elem == 'advantagesElem'
+      ? advantagesElem
+      : elem == 'ecosystemElem'
+      ? ecosystemElem
+      : elem == 'aboutElem'
+      ? aboutElem
+      : elem == 'partnersElem'
+      ? partnersElem
+      : contactsElem;
+  console.log('child', elemToGo.value.$el);
+  elemToGo.value.$el.scrollIntoView({
     behavior: 'smooth',
   });
-  // child.value.focus();
 };
 </script>
 
 <template>
-  <button @click="goToChild">Go To Child</button>
   <div class="md:w-[1440px] overflow-hidden">
-    <NavigationBar />
+    <NavigationBar :go-to="goToChild" />
     <AboutPlatform />
-    <Advantages />
-    <Ecosystem />
-    <AboutUs />
-    <Partners />
+    <Advantages ref="advantagesElem" />
+    <Ecosystem ref="ecosystemElem" />
+    <AboutUs ref="aboutElem" />
+    <Partners ref="partnersElem" />
     <Statistics />
-    <Network ref="child" />
-    <SocialNetworks />
+    <Network />
+    <SocialNetworks ref="contactsElem" />
     <Footer />
   </div>
 </template>
