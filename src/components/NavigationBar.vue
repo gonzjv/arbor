@@ -32,7 +32,7 @@ const NAV_BUTTONS = [
 
 <template>
   <header
-    class="px-[140px] md:w-[1440px] gap-48 justify-start items-center sm:hidden md:flex h-20"
+    class="sticky top-0 z-10 bg-slate-700 bg-opacity-70 px-[140px] md:w-[1440px] gap-48 justify-start items-center sm:hidden md:flex h-24"
   >
     <section
       class="flex gap-4 items-center min-w-max"

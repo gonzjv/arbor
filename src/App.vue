@@ -10,8 +10,8 @@ import Partners from './components/Partners.vue';
 import Statistics from './components/Statistics.vue';
 import Network from './components/Network.vue';
 import SocialNetworks from './components/SocialNetworks.vue';
-import Footer from './Footer.vue';
 import { ref, onMounted } from 'vue';
+import Footer from './components/Footer.vue';
 
 const advantagesElem = ref(null);
 const ecosystemElem = ref(null);
@@ -38,7 +38,7 @@ const goToChild = (elem) => {
 </script>
 
 <template>
-  <div class="md:w-[1440px] overflow-hidden">
+  <div class="md:w-[1440px]">
     <NavigationBar :go-to="goToChild" />
     <AboutPlatform />
     <Advantages ref="advantagesElem" />
