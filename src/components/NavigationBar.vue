@@ -49,19 +49,17 @@ const NAV_BUTTONS = [
     <section class="flex gap-16">
       <nav class="z-10">
         <ul
-          class="relative flex justify-center gap-1 border-b-green-400 border-b-2 h-10"
+          class="relative flex justify-between gap-10 border-b-green-400 border-b-2 h-14"
         >
           <Circle
-            class="absolute -bottom-1.5 -left-1.5"
+            class="absolute -bottom-1 -left-1.5"
           />
           <Circle
-            class="absolute -bottom-1.5 -right-1.5"
+            class="absolute -bottom-1 -right-1.5"
           />
-          <li
-            class="w-32"
-            v-for="nav in NAV_BUTTONS"
-          >
+          <li class="" v-for="nav in NAV_BUTTONS">
             <button
+              class="hover:text-green-400 transition-all w-full h-full"
               @click="props.goTo(nav.destination)"
             >
               {{ $t(nav.title) }}
@@ -69,7 +67,7 @@ const NAV_BUTTONS = [
           </li>
         </ul>
       </nav>
-      <form class="z-10">
+      <form class="z-10 flex items-center">
         <label for="locale-select"></label>
         <select
           class="bg-green-800 text-xs rounded-full h-9"
