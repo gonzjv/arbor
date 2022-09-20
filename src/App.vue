@@ -10,6 +10,7 @@ import Partners from './components/Partners.vue';
 import Statistics from './components/Statistics.vue';
 import Network from './components/Network.vue';
 import SocialNetworks from './components/SocialNetworks.vue';
+import Footer from './Footer.vue';
 </script>
 
 <template>
@@ -23,5 +24,6 @@ import SocialNetworks from './components/SocialNetworks.vue';
     <Statistics />
     <Network />
     <SocialNetworks />
+    <Footer />
   </div>
 </template>

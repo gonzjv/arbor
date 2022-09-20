@@ -61,5 +61,26 @@
   "network": {
     "arbor": "Arbor's decentralized network is built on the most secure, secure blockchain network. Recording to the network is extremely cheap – $ 0.01, and the processing speed is almost instant.",
     "node": "The Node system is scattered all over the world, which gives the continuity and reliability of the network. Using the Arbor network, you will be sure that your data is safe and, if necessary, you will receive your transaction faster than anyone else."
+  },
+  "footer": {
+    "useGuide": {
+      "title": "Use ARBOR",
+      "whitePaper": "WHITE PAPER",
+      "aboutArbor": "ABOUT ARBOR"
+    },
+    "build": {
+      "title": "Build"
+    },
+    "ecosystem": {
+      "title": "Ecosystem",
+      "explorer": "EXPLORER",
+      "dex": "DEX"
+    },
+    "support": {
+      "title": "Support",
+      "faq": "FAQ",
+      "contacts": "Contacts"
+    },
+    "rights": "All rights reserved, 18+"
   }
 }
