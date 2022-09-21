@@ -1,33 +1,44 @@
 <script setup>
 import logoImg from '@/assets/logo.svg';
 import Circle from './svg/Circle.vue';
+import { reactive, toRefs } from 'vue';
 
 const props = defineProps({
   goTo: Function,
 });
 
-const NAV_BUTTONS = [
-  {
-    title: 'navigation.platform',
-    destination: 'aboutElem',
-  },
-  {
-    title: 'navigation.advantages',
-    destination: 'advantagesElem',
-  },
-  {
-    title: 'navigation.ecosystem',
-    destination: 'ecosystemElem',
-  },
-  {
-    title: 'navigation.partners',
-    destination: 'partnersElem',
-  },
-  {
-    title: 'navigation.contacts',
-    destination: 'contactsElem',
-  },
-];
+let state = reactive({
+  displayBtn: false,
+  navBtns: [
+    {
+      title: 'navigation.platform',
+      destination: 'aboutElem',
+      displayDots: true,
+    },
+    {
+      title: 'navigation.advantages',
+      destination: 'advantagesElem',
+      displayDots: true,
+    },
+    {
+      title: 'navigation.ecosystem',
+      destination: 'ecosystemElem',
+      displayDots: false,
+    },
+    {
+      title: 'navigation.partners',
+      destination: 'partnersElem',
+      displayDots: false,
+    },
+    {
+      title: 'navigation.contacts',
+      destination: 'contactsElem',
+      displayDots: false,
+    },
+  ],
+});
+
+let { displayBtn, navBtns } = toRefs(state);
 </script>
 
 <template>
@@ -42,14 +53,20 @@ const NAV_BUTTONS = [
         class=""
         alt="Arbor logo"
       />
-      <h1 class="text-2xl font-semibold">
+      <h1
+        @mouseover="displayBtn = !displayBtn"
+        class="text-2xl font-semibold"
+      >
         ARBOR
       </h1>
     </section>
     <section class="flex gap-16">
+      <button v-if="displayBtn">
+        BIG NEW BUTTON
+      </button>
       <nav class="z-10">
         <ul
-          class="relative flex justify-between gap-10 border-b-green-400 border-b-2 h-14"
+          class="relative flex justify-between h-14"
         >
           <Circle
             class="absolute -bottom-1 -left-1.5"
@@ -57,12 +74,41 @@ const NAV_BUTTONS = [
           <Circle
             class="absolute -bottom-1 -right-1.5"
           />
-          <li class="" v-for="nav in NAV_BUTTONS">
+          <li
+            :key="nav.title"
+            @mouseover="nav.displayDots = true"
+            @mouseleave="nav.displayDots = false"
+            class=""
+            v-for="nav in navBtns"
+          >
             <button
-              class="hover:text-green-400 transition-all w-full h-full"
+              class="px-4 relative hover:text-green-400 font-semibold transition-all w-full h-full"
+              :class="{
+                'border-b-2 border-b-green-400':
+                  !nav.displayDots,
+                'border-b-2 border-transparent':
+                  nav.displayDots,
+              }"
               @click="props.goTo(nav.destination)"
             >
               {{ $t(nav.title) }}
+              <div
+                v-if="nav.displayDots"
+                class="absolute -bottom-[1.5px] left-0 w-full h-2 flex justify-between"
+              >
+                <div
+                  class="border-b-2 border-green-400 w-1/3"
+                ></div>
+                <Circle
+                  class="relative -bottom-1"
+                />
+                <Circle
+                  class="relative -bottom-1"
+                />
+                <div
+                  class="border-b-2 border-green-400 w-1/3"
+                ></div>
+              </div>
             </button>
           </li>
         </ul>
