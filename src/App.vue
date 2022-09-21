@@ -38,16 +38,15 @@ const goToChild = (elem) => {
 </script>
 
 <template>
-  <div class="md:w-[1440px]">
-    <NavigationBar :go-to="goToChild" />
-    <AboutPlatform />
-    <Advantages ref="advantagesElem" />
-    <Ecosystem ref="ecosystemElem" />
-    <AboutUs ref="aboutElem" />
-    <Partners ref="partnersElem" />
-    <Statistics />
-    <Network />
-    <SocialNetworks ref="contactsElem" />
-    <Footer />
-  </div>
+  <!-- <div class="md:w-[1440px]"> -->
+  <NavigationBar :go-to="goToChild" />
+  <AboutPlatform />
+  <Advantages ref="advantagesElem" />
+  <Ecosystem ref="ecosystemElem" />
+  <AboutUs ref="aboutElem" />
+  <Partners ref="partnersElem" />
+  <Statistics />
+  <Network />
+  <SocialNetworks ref="contactsElem" />
+  <Footer />
 </template>

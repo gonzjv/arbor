@@ -43,7 +43,7 @@ let { navBtns } = toRefs(state);
 
 <template>
   <header
-    class="sticky top-0 z-10 bg-slate-700 bg-opacity-70 px-[140px] md:w-[1440px] gap-48 justify-start items-center sm:hidden md:flex h-24"
+    class="sticky top-0 z-10 bg-slate-700 bg-opacity-70 md:px-10 xl:px-[140px] max-w-[360px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1440px] flex justify-between items-center h-24"
   >
     <section
       class="flex gap-4 items-center min-w-max"
@@ -58,7 +58,8 @@ let { navBtns } = toRefs(state);
       </h1>
     </section>
     <section class="flex gap-16">
-      <nav class="z-10">
+      <nav class="block lg:hidden">Burger!!!</nav>
+      <nav class="z-10 hidden lg:block">
         <ul
           class="relative flex justify-between h-14"
         >
