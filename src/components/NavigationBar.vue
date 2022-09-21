@@ -38,7 +38,7 @@ let state = reactive({
   ],
 });
 
-let { displayBtn, navBtns } = toRefs(state);
+let { navBtns } = toRefs(state);
 </script>
 
 <template>
@@ -77,6 +77,7 @@ let { displayBtn, navBtns } = toRefs(state);
           >
             <button
               class="px-4 relative hover:text-green-400 font-semibold w-full h-full"
+              :key="nav.destination"
               :class="{
                 'border-b-2 border-b-green-400':
                   !nav.displayDots,

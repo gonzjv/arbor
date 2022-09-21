@@ -1,13 +1,32 @@
 <script setup>
-const PRODUCTS = [
-  'DEX',
-  'Arbor Explorer',
-  'Arbor Game',
-  'Arbor Family',
-  'Arbor Game',
-  'Arbor Explorer',
-  'DEX',
-];
+import { reactive, toRefs } from 'vue';
+
+let state = reactive({
+  projects: [
+    {
+      title: 'Arbor Family',
+      info: 'ecosystem.projects.familyInfo',
+      displayInfo: true,
+    },
+    {
+      title: 'Arbor Game',
+      info: 'ecosystem.projects.gameInfo',
+      displayInfo: false,
+    },
+    {
+      title: 'Arbor Explorer',
+      info: 'ecosystem.projects.explorerInfo',
+      displayInfo: false,
+    },
+    {
+      title: 'DEX',
+      info: 'ecosystem.projects.dexInfo',
+      displayInfo: false,
+    },
+  ],
+});
+
+let { projects } = toRefs(state);
 </script>
 <template>
   <section
@@ -23,15 +42,29 @@ const PRODUCTS = [
         {{ $t('ecosystem.description') }}
       </p>
     </div>
-    <div
-      class="my-36 w-1/2 flex flex-col gap-5 justify-center"
+    <dl
+      class="my-10 ml-20 w-1/2 flex flex-col gap-5 items-start justify-around"
     >
-      <p
-        class="opacity-50 hover:opacity-100 text-6xl text-green-700"
-        v-for="item in PRODUCTS"
+      <div
+        @mouseover="item.displayInfo = true"
+        @mouseleave="item.displayInfo = false"
+        :key="item.title"
+        class="opacity-50 hover:opacity-100 h-1/5"
+        v-for="item in projects"
       >
-        {{ item }}
-      </p>
-    </div>
+        <dt
+          class="text-6xl text-green-700 text-left"
+        >
+          {{ item.title }}
+        </dt>
+        <dd class="" v-show="item.displayInfo">
+          <p
+            class="flex justify-center text-left"
+          >
+            {{ $t(item.info) }}
+          </p>
+        </dd>
+      </div>
+    </dl>
   </section>
 </template>
