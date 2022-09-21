@@ -1,25 +1,35 @@
 <script setup>
+import { reactive, toRefs } from 'vue';
 import aquaWorldImg from '@/assets/aqua-world.png';
 import prestigeImg from '@/assets/prestige.png';
 import magnetImg from '@/assets/magnet.png';
 
-const partners = [
-  {
-    img: aquaWorldImg,
-    title: 'partners.aquaWorld.title',
-    description: 'partners.aquaWorld.description',
-  },
-  {
-    img: prestigeImg,
-    title: 'partners.prestige.title',
-    description: 'partners.prestige.description',
-  },
-  {
-    img: magnetImg,
-    title: 'partners.magnet.title',
-    description: 'partners.magnet.description',
-  },
-];
+let state = reactive({
+  partners: [
+    {
+      img: aquaWorldImg,
+      title: 'partners.aquaWorld.title',
+      description:
+        'partners.aquaWorld.description',
+      displayLines: false,
+    },
+    {
+      img: prestigeImg,
+      title: 'partners.prestige.title',
+      description:
+        'partners.prestige.description',
+      displayLines: false,
+    },
+    {
+      img: magnetImg,
+      title: 'partners.magnet.title',
+      description: 'partners.magnet.description',
+      displayLines: false,
+    },
+  ],
+});
+
+const { partners } = toRefs(state);
 </script>
 <template>
   <section
@@ -30,9 +40,20 @@ const partners = [
     </h2>
     <div class="flex gap-5">
       <figure
-        class="bg-gray-800 rounded-3xl w-96 h-64 flex flex-col justify-center items-center"
+        @mouseover="partner.displayLines = true"
+        @mouseleave="partner.displayLines = false"
+        :key="partner.title"
+        class="relative bg-gray-800 rounded-3xl w-96 h-64 flex flex-col justify-center items-center"
         v-for="partner in partners"
       >
+        <div
+          v-if="partner.displayLines"
+          class="absolute top-0 left-36 h-2 shadow-md shadow-green-400/50 rounded-b-md w-1/4 bg-green-400"
+        ></div>
+        <div
+          v-if="partner.displayLines"
+          class="absolute bottom-0 left-36 h-2 shadow-[0_-4px_6px_-1px_rgba(74,222,128,0.5)] rounded-t-md w-1/4 bg-green-400"
+        ></div>
         <div
           class="h-1/2 flex justify-start items-center w-full ml-20"
         >

@@ -13,12 +13,12 @@ let state = reactive({
     {
       title: 'navigation.platform',
       destination: 'aboutElem',
-      displayDots: true,
+      displayDots: false,
     },
     {
       title: 'navigation.advantages',
       destination: 'advantagesElem',
-      displayDots: true,
+      displayDots: false,
     },
     {
       title: 'navigation.ecosystem',
@@ -53,17 +53,11 @@ let { displayBtn, navBtns } = toRefs(state);
         class=""
         alt="Arbor logo"
       />
-      <h1
-        @mouseover="displayBtn = !displayBtn"
-        class="text-2xl font-semibold"
-      >
+      <h1 class="text-2xl font-semibold">
         ARBOR
       </h1>
     </section>
     <section class="flex gap-16">
-      <button v-if="displayBtn">
-        BIG NEW BUTTON
-      </button>
       <nav class="z-10">
         <ul
           class="relative flex justify-between h-14"
