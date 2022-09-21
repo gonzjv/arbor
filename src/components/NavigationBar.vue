@@ -82,7 +82,7 @@ let { displayBtn, navBtns } = toRefs(state);
             v-for="nav in navBtns"
           >
             <button
-              class="px-4 relative hover:text-green-400 font-semibold transition-all w-full h-full"
+              class="px-4 relative hover:text-green-400 font-semibold w-full h-full"
               :class="{
                 'border-b-2 border-b-green-400':
                   !nav.displayDots,
@@ -94,19 +94,19 @@ let { displayBtn, navBtns } = toRefs(state);
               {{ $t(nav.title) }}
               <div
                 v-if="nav.displayDots"
-                class="absolute -bottom-[1.5px] left-0 w-full h-2 flex justify-between"
+                class="absolute -bottom-[1.5px] left-0 w-full h-2 flex"
               >
                 <div
                   class="border-b-2 border-green-400 w-1/3"
                 ></div>
                 <Circle
-                  class="relative -bottom-1"
+                  class="relative -bottom-1 mr-3"
                 />
                 <Circle
                   class="relative -bottom-1"
                 />
                 <div
-                  class="border-b-2 border-green-400 w-1/3"
+                  class="border-b-2 border-green-400 w-1/2"
                 ></div>
               </div>
             </button>
