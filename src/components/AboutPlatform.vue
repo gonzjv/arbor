@@ -2,9 +2,11 @@
 import treeImg from '@/assets/tree.png';
 </script>
 <template>
-  <main class="h-[680px] relative">
+  <main
+    class="h-[680px] relative md:overflow-x-hidden lg:overflow-visible"
+  >
     <img
-      class="overflow-hidden absolute w-[844px] xl:w-[1055px] bottom-36 xl:-bottom-14 md:-right-56 lg:-right-2 xl:-right-2 z-0"
+      class="absolute w-[844px] xl:w-[1055px] bottom-36 xl:-bottom-14 md:-right-56 lg:-right-2 xl:-right-2 z-0"
       :src="treeImg"
       alt=""
     />

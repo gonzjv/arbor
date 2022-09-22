@@ -33,29 +33,31 @@ const { partners } = toRefs(state);
 </script>
 <template>
   <section
-    class="flex flex-col px-[140px] my-36 gap-10"
+    class="flex flex-col md:px-5 lg:px-[140px] my-36 gap-10"
   >
     <h2 class="text-5xl text-left">
       {{ $t('partners.header') }}
     </h2>
-    <div class="flex gap-5">
+    <div
+      class="md:flex-col lg:flex-row flex gap-5"
+    >
       <figure
         @mouseover="partner.displayLines = true"
         @mouseleave="partner.displayLines = false"
         :key="partner.title"
-        class="relative bg-gray-800 rounded-3xl w-96 h-64 flex flex-col justify-center items-center"
+        class="relative bg-gray-800 rounded-3xl lg:w-96 h-64 flex md:flex-row lg:flex-col justify-center items-center md:px-5"
         v-for="partner in partners"
       >
         <div
           v-if="partner.displayLines"
-          class="absolute top-0 left-36 h-2 shadow-md shadow-green-400/50 rounded-b-md w-1/4 bg-green-400"
+          class="absolute top-0 h-2 shadow-md shadow-green-400/50 rounded-b-md w-1/4 bg-green-400"
         ></div>
         <div
           v-if="partner.displayLines"
-          class="absolute bottom-0 left-36 h-2 shadow-[0_-4px_6px_-1px_rgba(74,222,128,0.5)] rounded-t-md w-1/4 bg-green-400"
+          class="absolute bottom-0 h-2 shadow-[0_-4px_6px_-1px_rgba(74,222,128,0.5)] rounded-t-md w-1/4 bg-green-400"
         ></div>
         <div
-          class="h-1/2 flex justify-start items-center w-full ml-20"
+          class="h-1/2 flex justify-start items-center md:w-1/2 lg:w-full"
         >
           <img
             :src="partner.img"
@@ -63,7 +65,7 @@ const { partners } = toRefs(state);
           />
         </div>
         <figcaption
-          class="text-left w-72 h-1/2 flex items-start"
+          class="text-left md:w-1/2 lg:w-72 h-1/2 flex md:items-center lg:items-start"
         >
           {{ $t(partner.description) }}
         </figcaption>
