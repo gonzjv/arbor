@@ -28,7 +28,7 @@ const SOCIAL_NETWORKS = [
 ];
 </script>
 <template>
-  <section class="flex h-[480px]">
+  <section class="flex md:h-64 lg:h-[480px]">
     <a
       v-for="network in SOCIAL_NETWORKS"
       :class="network.style"

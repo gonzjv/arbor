@@ -41,11 +41,13 @@ const FOOTER_ELEMENTS = [
 </script>
 <template>
   <footer
-    class="px-[140px] pt-36 pb-12 flex flex-col gap-20"
+    class="md:px-5 lg:px-[140px] pt-36 pb-12 flex flex-col gap-20"
   >
-    <dl class="flex justify-between">
+    <dl
+      class="flex md:flex-wrap lg:flex-nowrap md:gap-x-60 md:gap-y-20 lg:gap-5 lg:justify-between"
+    >
       <div
-        class="flex flex-col gap-5 basis-1/4"
+        class="flex flex-col gap-5 md:items-start"
         v-for="elem in FOOTER_ELEMENTS"
         :key="elem.category"
       >
