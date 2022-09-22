@@ -24,23 +24,29 @@ const advantagesArr = [
 </script>
 <template>
   <section
-    class="flex flex-col items-start gap-14 mt-52 px-[140px]"
+    class="flex flex-col items-start gap-14 mt-52 lg:max-w-screen-lg xl:max-w-screen-xl md:px-20 2xl:px-[140px]"
   >
     <h2 class="text-5xl">
       {{ $t('advantages.header') }}
     </h2>
-    <article class="flex gap-36">
+    <article
+      class="lg:flex-col xl:flex-row flex lg:gap-10 xl:gap-36"
+    >
       <figure
         v-for="adv in advantagesArr"
-        class="flex flex-col w-64 gap-7"
+        class="lg:flex-row flex xl:flex-col lg:w-full xl:w-64 gap-7"
       >
         <div
-          class="w-64 h-64 flex items-center justify-center bg-gray-800 rounded-3xl"
+          class="lg:w-1/3 xl:w-64 h-64 flex items-center justify-center bg-gray-800 rounded-3xl"
         >
-          <img class="" :src="adv.img" alt="" />
+          <img
+            class="lg:w-[200px]"
+            :src="adv.img"
+            alt=""
+          />
         </div>
         <figcaption
-          class="flex flex-col items-start gap-3 text-left"
+          class="lg:w-2/3 xl:w-full flex flex-col items-start gap-3 text-left"
         >
           <h3 class="text-2xl text-green-400">
             {{ $t(adv.header) }}
@@ -51,12 +57,14 @@ const advantagesArr = [
         </figcaption>
       </figure>
     </article>
-    <article class="flex gap-24 mb-10">
+    <article
+      class="flex lg:gap-10 xl:gap-24 mb-10 w-full"
+    >
       <figure class="min-w-max">
         <img :src="supportImg" alt="" />
       </figure>
       <h4
-        class="text-3xl text-left font-semibold flex items-center border-t-2 border-green-400"
+        class="md:w-10/12 2xl:w-full text-3xl text-left font-semibold flex items-center border-t-2 border-green-400"
       >
         {{ $t('advantages.purpose') }}
       </h4>
