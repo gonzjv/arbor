@@ -6,7 +6,7 @@ import treeImg from '@/assets/tree.png';
     class="h-[680px] relative md:overflow-x-hidden lg:overflow-visible"
   >
     <img
-      class="absolute w-[844px] xl:w-[1055px] bottom-36 xl:-bottom-14 md:-right-56 lg:-right-2 xl:-right-2 z-0"
+      class="absolute w-[844px] xl:w-[1055px] bottom-36 xl:-bottom-14 md:-right-56 lg:-right-2 xl:right-5 z-0"
       :src="treeImg"
       alt=""
     />

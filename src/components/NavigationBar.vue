@@ -43,7 +43,7 @@ let { navBtns } = toRefs(state);
 
 <template>
   <header
-    class="sticky top-0 z-10 bg-slate-700 bg-opacity-70 md:px-10 xl:px-[140px] max-w-[360px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1400px] flex justify-between items-center h-24"
+    class="sticky top-0 z-10 bg-slate-700 bg-opacity-70 md:px-10 xl:px-[140px] flex justify-between items-center h-24"
   >
     <section
       class="flex gap-4 items-center min-w-max"
