@@ -36,12 +36,12 @@ let { projects } = toRefs(state);
       {{ $t('ecosystem.header') }}
     </h2>
     <p
-      class="absolute md:max-w-xs xl:max-w-lg bottom-32 left-36 text-left text-3xl"
+      class="absolute md:max-w-sm xl:max-w-lg md:top-60 md:left-1/3 lg:top-3/4 lg:left-36 text-left text-3xl"
     >
       {{ $t('ecosystem.description') }}
     </p>
     <dl
-      class="absolute top-10 left-1/2 h-full max-w-sm flex flex-col gap-5 items-start justify-around"
+      class="absolute md:top-1/3 lg:top-10 md:left-1/3 lg:left-1/2 md:h-2/3 lg:h-full max-w-sm flex flex-col gap-5 items-start justify-around"
     >
       <div
         @mouseover="item.displayInfo = true"

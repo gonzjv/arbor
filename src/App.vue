@@ -39,7 +39,7 @@ const goToChild = (elem) => {
 
 <template>
   <div
-    class="md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
+    class="md:max-w-screen-md lg:max-w-screen-lg xl:max-w-[1440px] 2xl:max-w-screen-2xl"
   >
     <NavigationBar :go-to="goToChild" />
     <AboutPlatform />
