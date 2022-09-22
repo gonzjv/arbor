@@ -30,20 +30,18 @@ let { projects } = toRefs(state);
 </script>
 <template>
   <section
-    class="relative flex gap-5 bg-gray-50 text-gray-800 px-[140px]"
+    class="h-[1060px] relative flex gap-5 bg-gray-50 text-gray-800 md:px-5 xl:px-[140px]"
   >
-    <div
-      class="my-36 flex flex-col items-start w-1/2"
+    <h2 class="absolute top-32 left-36 text-5xl">
+      {{ $t('ecosystem.header') }}
+    </h2>
+    <p
+      class="absolute md:max-w-xs xl:max-w-lg bottom-32 left-36 text-left text-3xl"
     >
-      <h2 class="text-5xl">
-        {{ $t('ecosystem.header') }}
-      </h2>
-      <p class="mt-96 text-left text-3xl">
-        {{ $t('ecosystem.description') }}
-      </p>
-    </div>
+      {{ $t('ecosystem.description') }}
+    </p>
     <dl
-      class="my-10 ml-20 w-1/2 flex flex-col gap-5 items-start justify-around"
+      class="absolute top-10 left-1/2 h-full max-w-sm flex flex-col gap-5 items-start justify-around"
     >
       <div
         @mouseover="item.displayInfo = true"
