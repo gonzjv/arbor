@@ -43,21 +43,23 @@ let { navBtns } = toRefs(state);
 
 <template>
   <header
-    class="sticky top-0 z-10 bg-slate-700 bg-opacity-70 md:px-10 xl:px-[140px] flex justify-between items-center h-24"
+    class="sticky top-0 z-10 bg-slate-700 bg-opacity-70 px-2 md:px-10 xl:px-[140px] flex justify-between items-center h-20 md:h-24"
   >
     <section
       class="flex gap-4 items-center min-w-max"
     >
       <img
         :src="logoImg"
-        class=""
+        class="w-14 md:w-full"
         alt="Arbor logo"
       />
-      <h1 class="text-2xl font-semibold">
+      <h1
+        class="text-lg md:text-2xl font-semibold"
+      >
         ARBOR
       </h1>
     </section>
-    <section class="flex gap-16">
+    <section class="flex gap-4 md:gap-16">
       <nav class="block lg:hidden">Burger!!!</nav>
       <nav class="z-10 hidden lg:block">
         <ul
