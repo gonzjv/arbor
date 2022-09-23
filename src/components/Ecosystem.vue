@@ -1,11 +1,11 @@
 <script setup>
-import { reactive, toRefs } from 'vue';
+import { reactive, toRefs, onMounted } from 'vue';
 
 let state = reactive({
   projects: [
     {
-      title: 'DEX',
-      info: 'ecosystem.projects.dexInfo',
+      title: 'Arbor Explorer',
+      info: 'ecosystem.projects.explorerInfo',
       displayInfo: false,
       order: 'order-1',
       orderVar: 1,
@@ -59,6 +59,12 @@ const changeOrder = () => {
     }
   });
 };
+
+onMounted(() =>
+  setInterval(() => {
+    changeOrder();
+  }, 3000)
+);
 </script>
 <template>
   <section
@@ -78,21 +84,28 @@ const changeOrder = () => {
       {{ $t('ecosystem.description') }}
     </p>
     <dl
-      class="absolute top-1/3 lg:top-10 md:left-1/3 lg:left-1/2 md:h-2/3 lg:h-full max-w-sm flex flex-col gap-5 items-start justify-around"
+      class="absolute top-1/3 lg:top-10 xl:top-0 md:left-1/3 lg:left-1/2 md:h-2/3 lg:h-full max-w-sm xl:max-w-md flex flex-col gap-5 items-start justify-center"
     >
       <div
-        @mouseover="item.displayInfo = true"
-        @mouseleave="item.displayInfo = false"
         :key="item.title"
+        class="max-h-64"
         :class="item.order"
         v-for="item in projects"
       >
         <dt
           class="text-6xl text-green-700 text-left"
+          :class="
+            item.orderVar !== 3 && 'opacity-50'
+          "
         >
           {{ item.title }}
         </dt>
-        <dd class="" v-show="item.displayInfo">
+        <dd
+          class=""
+          v-show="
+            item.orderVar == 3 ? true : false
+          "
+        >
           <p
             class="flex justify-center text-left"
           >
