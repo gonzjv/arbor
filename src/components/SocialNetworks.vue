@@ -9,26 +9,28 @@ const SOCIAL_NETWORKS = [
     img: logoVk,
     link: 'https://vk.com/arborplatform',
     style:
-      'flex justify-center items-center w-1/3 bg-green-400 hover:bg-green-800',
+      'flex justify-center items-center h-1/3 md:h-full md:w-1/3 bg-green-400 hover:bg-green-800',
   },
   {
     title: 'Github',
     img: logoGithub,
     link: 'https://github.com/Arbor-platform',
     style:
-      'flex justify-center items-center w-1/3 bg-black hover:bg-white',
+      'flex justify-center items-center h-1/3 md:h-full md:w-1/3 bg-black hover:bg-white',
   },
   {
     title: 'Medium',
     img: logoMedium,
     link: 'https://github.com/Arbor-platform',
     style:
-      'flex justify-center items-center w-1/3 bg-green-800 hover:bg-green-400',
+      'flex justify-center items-center h-1/3 md:h-full md:w-1/3 bg-green-800 hover:bg-green-400',
   },
 ];
 </script>
 <template>
-  <section class="flex md:h-64 lg:h-[480px]">
+  <section
+    class="flex flex-col md:flex-row h-[960px] md:h-64 lg:h-[480px]"
+  >
     <a
       v-for="network in SOCIAL_NETWORKS"
       :class="network.style"

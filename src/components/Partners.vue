@@ -33,19 +33,17 @@ const { partners } = toRefs(state);
 </script>
 <template>
   <section
-    class="flex flex-col md:px-5 lg:px-[140px] my-36 gap-10"
+    class="flex flex-col px-5 lg:px-[140px] my-10 md:my-36 gap-10"
   >
     <h2 class="text-5xl text-left">
       {{ $t('partners.header') }}
     </h2>
-    <div
-      class="md:flex-col lg:flex-row flex gap-5"
-    >
+    <div class="flex-col lg:flex-row flex gap-5">
       <figure
         @mouseover="partner.displayLines = true"
         @mouseleave="partner.displayLines = false"
         :key="partner.title"
-        class="relative bg-gray-800 rounded-3xl lg:w-96 h-64 flex md:flex-row lg:flex-col justify-center items-center md:px-5"
+        class="relative bg-gray-800 rounded-3xl lg:w-96 h-64 flex flex-col md:flex-row lg:flex-col justify-center items-center md:px-5"
         v-for="partner in partners"
       >
         <div
@@ -65,7 +63,7 @@ const { partners } = toRefs(state);
           />
         </div>
         <figcaption
-          class="text-left md:w-1/2 lg:w-72 h-1/2 flex md:items-center lg:items-start"
+          class="text-left w-3/4 md:w-1/2 lg:w-72 h-1/2 flex items-start md:items-center lg:items-start"
         >
           {{ $t(partner.description) }}
         </figcaption>

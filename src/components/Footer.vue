@@ -41,17 +41,17 @@ const FOOTER_ELEMENTS = [
 </script>
 <template>
   <footer
-    class="md:px-5 lg:px-[140px] pt-36 pb-12 flex flex-col gap-20"
+    class="px-5 lg:px-[140px] pt-10 md:pt-36 pb-12 flex flex-col gap-20"
   >
     <dl
-      class="flex md:flex-wrap lg:flex-nowrap md:gap-x-60 md:gap-y-20 lg:gap-5 lg:justify-between"
+      class="flex flex-wrap lg:flex-nowrap gap-x-60 gap-y-20 lg:gap-5 lg:justify-between"
     >
       <div
-        class="flex flex-col gap-5 md:items-start"
+        class="flex flex-col gap-5 items-start"
         v-for="elem in FOOTER_ELEMENTS"
         :key="elem.category"
       >
-        <dt class="text-xl">
+        <dt class="text-lg">
           {{ $t(elem.category) }}
         </dt>
         <dd
@@ -66,7 +66,9 @@ const FOOTER_ELEMENTS = [
         </dd>
       </div>
     </dl>
-    <aside class="flex justify-between">
+    <aside
+      class="flex flex-wrap gap-5 md:flex-nowrap md:justify-between"
+    >
       <div class="flex gap-5">
         <a href="">Privacy Policy</a>
         <a href="">Cookie Policy</a>
