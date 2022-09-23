@@ -2,6 +2,7 @@
 import logoImg from '@/assets/logo.svg';
 import Circle from './svg/Circle.vue';
 import { reactive, toRefs } from 'vue';
+import { Bars3Icon } from '@heroicons/vue/24/outline';
 
 const props = defineProps({
   goTo: Function,
@@ -59,74 +60,76 @@ let { navBtns } = toRefs(state);
         ARBOR
       </h1>
     </section>
-    <section class="flex gap-4 md:gap-16">
-      <nav class="block lg:hidden">Burger!!!</nav>
-      <nav class="z-10 hidden lg:block">
-        <ul
-          class="relative flex justify-between h-14"
+    <nav class="flex gap-4 md:gap-16 lg:hidden">
+      <button>
+        <Bars3Icon class="h-10 text-green-400" />
+      </button>
+    </nav>
+    <nav class="z-10 hidden lg:block">
+      <ul
+        class="relative flex justify-between h-14"
+      >
+        <Circle
+          class="absolute -bottom-1 -left-1.5"
+        />
+        <Circle
+          class="absolute -bottom-1 -right-1.5"
+        />
+        <li
+          :key="nav.title"
+          @mouseover="nav.displayDots = true"
+          @mouseleave="nav.displayDots = false"
+          class=""
+          v-for="nav in navBtns"
         >
-          <Circle
-            class="absolute -bottom-1 -left-1.5"
-          />
-          <Circle
-            class="absolute -bottom-1 -right-1.5"
-          />
-          <li
-            :key="nav.title"
-            @mouseover="nav.displayDots = true"
-            @mouseleave="nav.displayDots = false"
-            class=""
-            v-for="nav in navBtns"
+          <button
+            class="px-4 relative hover:text-green-400 font-semibold w-full h-full"
+            :key="nav.destination"
+            :class="{
+              'border-b-2 border-b-green-400':
+                !nav.displayDots,
+              'border-b-2 border-transparent':
+                nav.displayDots,
+            }"
+            @click="props.goTo(nav.destination)"
           >
-            <button
-              class="px-4 relative hover:text-green-400 font-semibold w-full h-full"
-              :key="nav.destination"
-              :class="{
-                'border-b-2 border-b-green-400':
-                  !nav.displayDots,
-                'border-b-2 border-transparent':
-                  nav.displayDots,
-              }"
-              @click="props.goTo(nav.destination)"
+            {{ $t(nav.title) }}
+            <div
+              v-if="nav.displayDots"
+              class="absolute -bottom-[1px] left-0 w-full h-2 flex"
             >
-              {{ $t(nav.title) }}
               <div
-                v-if="nav.displayDots"
-                class="absolute -bottom-[1px] left-0 w-full h-2 flex"
-              >
-                <div
-                  class="border-b-2 border-green-400 w-1/3"
-                ></div>
-                <Circle
-                  class="relative -bottom-1 mr-3"
-                />
-                <Circle
-                  class="relative -bottom-1"
-                />
-                <div
-                  class="border-b-2 border-green-400 w-1/2"
-                ></div>
-              </div>
-            </button>
-          </li>
-        </ul>
-      </nav>
-      <form class="z-10 flex items-center">
-        <label for="locale-select"></label>
-        <select
-          class="bg-green-800 text-xs rounded-full h-9"
-          id="locale-select"
-          v-model="$i18n.locale"
+                class="border-b-2 border-green-400 w-1/3"
+              ></div>
+              <Circle
+                class="relative -bottom-1 mr-3"
+              />
+              <Circle
+                class="relative -bottom-1"
+              />
+              <div
+                class="border-b-2 border-green-400 w-1/2"
+              ></div>
+            </div>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <form class="z-10 flex items-center">
+      <label for="locale-select"></label>
+      <select
+        class="bg-green-800 text-xs rounded-full h-9"
+        id="locale-select"
+        v-model="$i18n.locale"
+      >
+        <option
+          v-for="locale in $i18n.availableLocales"
+          :key="locale"
+          :value="locale"
         >
-          <option
-            v-for="locale in $i18n.availableLocales"
-            :key="locale"
-            :value="locale"
-          >
-            {{ locale }}
-          </option>
-        </select>
-      </form>
-    </section>
+          {{ locale }}
+        </option>
+      </select>
+    </form>
   </header>
 </template>
