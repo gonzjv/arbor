@@ -90,8 +90,15 @@ onMounted(() =>
     >
       {{ $t('ecosystem.description') }}
     </p>
-    <dl
+    <TransitionGroup
       class="absolute top-1/3 lg:top-10 xl:top-0 md:left-1/3 lg:left-1/2 md:h-2/3 lg:h-full max-w-sm xl:max-w-md flex flex-col gap-5 items-start justify-center"
+      :css="false"
+      tag="dl"
+      move-class="transition duration-1000"
+      enter-active-class="transition"
+      leave-active-class="transition absolute"
+      enter-from-class="opacity-0 translate-x-0"
+      leave-to-class="opacity-0 translate-x-0"
     >
       <div
         :key="item.title"
@@ -120,6 +127,6 @@ onMounted(() =>
           </p>
         </dd>
       </div>
-    </dl>
+    </TransitionGroup>
   </section>
 </template>
