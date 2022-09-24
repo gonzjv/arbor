@@ -10,7 +10,7 @@ const props = defineProps({
 </script>
 <template>
   <aside
-    class="bg-slate-700 bg-opacity-70 p-3 absolute top-24 left-0 flex flex-col w-full"
+    class="bg-slate-700 bg-opacity-70 p-3 absolute top-20 md:top-24 left-0 flex flex-col w-full"
   >
     <nav
       class="z-10 flex flex-col gap-10 items-center lg:hidden"
