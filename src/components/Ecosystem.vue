@@ -70,14 +70,21 @@ onMounted(() =>
   <section
     class="h-[1060px] relative flex gap-5 bg-gray-50 text-gray-800 px-5 xl:px-[140px]"
   >
-    <button @click="changeOrder">
-      Change Order
-    </button>
     <h2
       class="absolute top-16 md:top-32 left-5 md:left-36 text-4xl md:text-5xl"
     >
       {{ $t('ecosystem.header') }}
     </h2>
+    <aside
+      class="absolute top-96 left-36 max-w-sm text-left text-xl"
+    >
+      {{
+        $t(
+          projects.find((el) => el.orderVar == 3)
+            .info
+        )
+      }}
+    </aside>
     <p
       class="absolute md:max-w-sm xl:max-w-lg top-28 md:top-60 md:left-1/3 lg:top-3/4 lg:left-36 text-left text-3xl"
     >
