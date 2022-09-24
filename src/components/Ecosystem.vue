@@ -76,7 +76,7 @@ onMounted(() =>
       {{ $t('ecosystem.header') }}
     </h2>
     <aside
-      class="absolute top-96 left-36 max-w-sm text-left text-xl"
+      class="absolute top-52 left-36 max-w-sm text-left text-xl"
     >
       {{
         $t(
