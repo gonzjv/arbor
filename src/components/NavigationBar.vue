@@ -3,13 +3,14 @@ import logoImg from '@/assets/logo.svg';
 import Circle from './svg/Circle.vue';
 import { reactive, toRefs } from 'vue';
 import { Bars3Icon } from '@heroicons/vue/24/outline';
+import NavPopup from './NavPopup.vue';
 
 const props = defineProps({
   goTo: Function,
 });
 
 let state = reactive({
-  displayBtn: false,
+  displayNavPopup: false,
   navBtns: [
     {
       title: 'navigation.platform',
@@ -39,13 +40,25 @@ let state = reactive({
   ],
 });
 
-let { navBtns } = toRefs(state);
+let { navBtns, displayNavPopup } = toRefs(state);
+
+const togglePopup = () => {
+  state.displayNavPopup = !state.displayNavPopup;
+};
 </script>
 
 <template>
   <header
     class="sticky top-0 z-10 bg-slate-700 bg-opacity-70 px-2 md:px-10 xl:px-[140px] flex justify-between items-center h-20 md:h-24"
   >
+    <NavPopup
+      :toggle-popup="togglePopup"
+      :display-popup="displayNavPopup"
+      :go-to="goTo"
+      :nav-btns="navBtns"
+      class=""
+      v-if="displayNavPopup"
+    />
     <section
       class="flex gap-4 items-center min-w-max"
     >
@@ -61,7 +74,11 @@ let { navBtns } = toRefs(state);
       </h1>
     </section>
     <nav class="flex gap-4 md:gap-16 lg:hidden">
-      <button>
+      <button
+        @click="
+          displayNavPopup = !displayNavPopup
+        "
+      >
         <Bars3Icon class="h-10 text-green-400" />
       </button>
     </nav>
