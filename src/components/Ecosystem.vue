@@ -63,7 +63,7 @@ const changeOrder = () => {
 onMounted(() =>
   setInterval(() => {
     changeOrder();
-  }, 3000)
+  }, 6000)
 );
 </script>
 <template>
@@ -96,13 +96,13 @@ onMounted(() =>
       tag="dl"
       move-class="transition duration-1000"
       enter-active-class="transition"
-      leave-active-class="transition absolute"
+      leave-active-class="transition "
       enter-from-class="opacity-0 translate-x-0"
       leave-to-class="opacity-0 translate-x-0"
     >
       <div
         :key="item.title"
-        class="max-h-64"
+        class="max-h-64 w-full"
         :class="item.order"
         v-for="item in projects"
       >
@@ -114,18 +114,26 @@ onMounted(() =>
         >
           {{ item.title }}
         </dt>
-        <dd
-          class=""
-          v-show="
-            item.orderVar == 3 ? true : false
-          "
+        <Transition
+          move-class="transition duration-1000"
+          enter-active-class="transition duration-1000"
+          leave-active-class="transition absolute"
+          enter-from-class="opacity-0 translate-x-0"
+          leave-to-class="opacity-0 translate-x-0"
         >
-          <p
-            class="flex justify-center text-left"
+          <dd
+            class=""
+            v-show="
+              item.orderVar == 3 ? true : false
+            "
           >
-            {{ $t(item.info) }}
-          </p>
-        </dd>
+            <p
+              class="flex justify-center text-left"
+            >
+              {{ $t(item.info) }}
+            </p>
+          </dd>
+        </Transition>
       </div>
     </TransitionGroup>
   </section>
