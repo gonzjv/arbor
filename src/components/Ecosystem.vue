@@ -75,7 +75,7 @@ onMounted(() =>
     >
       {{ $t('ecosystem.header') }}
     </h2>
-    <aside
+    <!-- <aside
       class="absolute top-52 left-36 max-w-sm text-left text-xl"
     >
       {{
@@ -84,12 +84,12 @@ onMounted(() =>
             .info
         )
       }}
-    </aside>
-    <p
+    </aside> -->
+    <!-- <p
       class="absolute md:max-w-sm xl:max-w-lg top-28 md:top-60 md:left-1/3 lg:top-3/4 lg:left-36 text-left text-3xl"
     >
       {{ $t('ecosystem.description') }}
-    </p>
+    </p> -->
     <TransitionGroup
       class="absolute top-1/3 lg:top-10 xl:top-0 md:left-1/3 lg:left-1/2 md:h-2/3 lg:h-full max-w-sm xl:max-w-md flex flex-col gap-5 items-start justify-center"
       :css="false"

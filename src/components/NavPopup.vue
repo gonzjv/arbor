@@ -7,6 +7,11 @@ const props = defineProps({
   navBtns: Array,
   displayPopup: Boolean,
 });
+
+const handleNavClick = (destination) => {
+  props.goTo(destination);
+  props.togglePopup();
+};
 </script>
 <template>
   <aside
@@ -27,7 +32,9 @@ const props = defineProps({
           <button
             class="px-4 relative hover:text-green-400 font-semibold w-full h-full"
             :key="nav.destination"
-            @click="props.goTo(nav.destination)"
+            @click="
+              handleNavClick(nav.destination)
+            "
           >
             {{ $t(nav.title) }}
           </button>

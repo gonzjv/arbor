@@ -3,7 +3,7 @@ import treeImg from '@/assets/tree.png';
 </script>
 <template>
   <main
-    class="h-[600px] md:h-[680px] relative md:overflow-x-hidden lg:overflow-visible"
+    class="h-[600px] md:h-[680px] relative overflow-x-hidden lg:overflow-visible"
   >
     <img
       class="absolute min-w-[390px] md:w-[844px] xl:w-[1055px] md:bottom-36 xl:-bottom-14 -right-32 md:-right-56 lg:-right-2 xl:right-5 z-0"
