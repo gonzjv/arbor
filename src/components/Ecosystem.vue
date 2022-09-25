@@ -68,72 +68,55 @@ onMounted(() =>
 </script>
 <template>
   <section
-    class="h-[1060px] relative flex gap-5 bg-gray-50 text-gray-800 px-5 xl:px-[140px]"
+    class="h-[700px] relative flex flex-col items-start gap-5 bg-gray-50 text-gray-800 px-5 xl:px-[140px]"
   >
     <h2
-      class="absolute top-16 md:top-32 left-5 md:left-36 text-4xl md:text-5xl"
+      class="mt-16 md:mt-20 text-4xl md:text-5xl"
     >
       {{ $t('ecosystem.header') }}
     </h2>
-    <!-- <aside
-      class="absolute top-52 left-36 max-w-sm text-left text-xl"
-    >
-      {{
-        $t(
-          projects.find((el) => el.orderVar == 3)
-            .info
-        )
-      }}
-    </aside> -->
-    <!-- <p
-      class="absolute md:max-w-sm xl:max-w-lg top-28 md:top-60 md:left-1/3 lg:top-3/4 lg:left-36 text-left text-3xl"
-    >
-      {{ $t('ecosystem.description') }}
-    </p> -->
     <TransitionGroup
-      class="absolute top-1/3 lg:top-10 xl:top-0 md:left-1/3 lg:left-1/2 md:h-2/3 lg:h-full max-w-sm xl:max-w-md flex flex-col gap-5 items-start justify-center"
+      class="md:h-2/3 lg:h-full w-full flex flex-col gap-5 items-start justify-center"
       :css="false"
       tag="dl"
       move-class="transition duration-1000"
-      enter-active-class="transition"
-      leave-active-class="transition "
+      enter-active-class="transition duration-1000"
+      leave-active-class="transition duration-1000 absolute"
       enter-from-class="opacity-0 translate-x-0"
       leave-to-class="opacity-0 translate-x-0"
     >
       <div
         :key="item.title"
-        class="max-h-64 w-full"
+        class="max-h-64 w-full flex items-center"
         :class="item.order"
         v-for="item in projects"
       >
         <dt
-          class="text-6xl text-green-700 text-left"
+          class="ml-40 text-6xl text-green-700 text-left order-2"
           :class="
-            item.orderVar !== 3 && 'opacity-50'
+            item.orderVar !== 3 && 'opacity-30'
           "
         >
           {{ item.title }}
         </dt>
-        <Transition
-          move-class="transition duration-1000"
-          enter-active-class="transition duration-1000"
-          leave-active-class="transition absolute"
-          enter-from-class="opacity-0 translate-x-0"
-          leave-to-class="opacity-0 translate-x-0"
-        >
-          <dd
-            class=""
-            v-show="
-              item.orderVar == 3 ? true : false
-            "
+        <dd class="w-1/2">
+          <Transition
+            move-class="transition duration-1000"
+            enter-active-class="transition duration-1000"
+            leave-active-class="transition duration-1000 absolute w-1/2"
+            enter-from-class="opacity-0 translate-x-0"
+            leave-to-class="opacity-0 translate-x-0"
           >
             <p
-              class="flex justify-center text-left"
+              v-show="
+                item.orderVar == 3 ? true : false
+              "
+              class="flex justify-center text-left text-xl"
             >
               {{ $t(item.info) }}
             </p>
-          </dd>
-        </Transition>
+          </Transition>
+        </dd>
       </div>
     </TransitionGroup>
   </section>
