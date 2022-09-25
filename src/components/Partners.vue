@@ -43,7 +43,7 @@ const { partners } = toRefs(state);
         @mouseover="partner.displayLines = true"
         @mouseleave="partner.displayLines = false"
         :key="partner.title"
-        class="relative bg-gray-800 rounded-3xl lg:w-96 h-64 flex flex-col md:flex-row lg:flex-col justify-center items-center md:px-5"
+        class="relative bg-gray-800 rounded-3xl lg:w-96 h-64 flex flex-col md:flex-row lg:flex-col justify-center items-center md:px-10"
         v-for="partner in partners"
       >
         <div
@@ -55,7 +55,7 @@ const { partners } = toRefs(state);
           class="absolute bottom-0 h-2 shadow-[0_-4px_6px_-1px_rgba(74,222,128,0.5)] rounded-t-md w-1/4 bg-green-400"
         ></div>
         <div
-          class="h-1/2 flex justify-start items-center md:w-1/2 lg:w-full"
+          class="h-1/2 flex justify-start items-center w-3/4 md:w-1/2 lg:w-full"
         >
           <img
             :src="partner.img"
