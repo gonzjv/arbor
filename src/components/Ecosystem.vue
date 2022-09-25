@@ -68,10 +68,10 @@ onMounted(() =>
 </script>
 <template>
   <section
-    class="h-[700px] relative flex flex-col items-start gap-5 bg-gray-50 text-gray-800 px-5 xl:px-[140px]"
+    class="h-[600px] md:h-[700px] relative flex flex-col items-start gap-10 md:gap-5 bg-gray-50 text-gray-800 px-5 xl:px-[140px]"
   >
     <h2
-      class="mt-16 md:mt-20 text-4xl md:text-5xl"
+      class="mt-10 md:mt-20 text-4xl md:text-5xl"
     >
       {{ $t('ecosystem.header') }}
     </h2>
@@ -87,23 +87,23 @@ onMounted(() =>
     >
       <div
         :key="item.title"
-        class="max-h-64 w-full flex items-center"
+        class="max-h-64 w-full flex flex-col md:flex-row md:items-center"
         :class="item.order"
         v-for="item in projects"
       >
         <dt
-          class="ml-40 text-6xl text-green-700 text-left order-2"
+          class="ml-0 md:ml-20 lg:ml-40 text-2xl md:text-4xl lg:text-6xl text-green-700 text-left md:order-2"
           :class="
             item.orderVar !== 3 && 'opacity-30'
           "
         >
           {{ item.title }}
         </dt>
-        <dd class="w-1/2">
+        <dd class="md:w-1/2">
           <Transition
             move-class="transition duration-1000"
             enter-active-class="transition duration-1000"
-            leave-active-class="transition duration-1000 absolute w-1/2"
+            leave-active-class="transition duration-1000 absolute md:w-1/2"
             enter-from-class="opacity-0 translate-x-0"
             leave-to-class="opacity-0 translate-x-0"
           >
@@ -111,7 +111,7 @@ onMounted(() =>
               v-show="
                 item.orderVar == 3 ? true : false
               "
-              class="flex justify-center text-left text-xl"
+              class="my-3 flex justify-center text-left text-sm md:text-base lg:text-xl"
             >
               {{ $t(item.info) }}
             </p>
