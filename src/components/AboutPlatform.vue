@@ -1,14 +1,12 @@
 <script setup>
-import treeImg from '@/assets/tree.png';
+import Tree from './svg/Tree.vue';
 </script>
 <template>
   <main
     class="h-[600px] md:h-[680px] relative overflow-x-hidden lg:overflow-visible"
   >
-    <img
-      class="absolute min-w-[390px] md:w-[844px] xl:w-[1055px] md:bottom-36 xl:-bottom-14 -right-32 md:-right-56 lg:-right-2 xl:right-5 z-0"
-      :src="treeImg"
-      alt=""
+    <Tree
+      class="absolute min-w-[300px] w-[300px] md:w-[700px] xl:w-[950px] bottom-72 md:bottom-20 xl:-bottom-32 -right-24 md:-right-56 lg:-right-0 z-0"
     />
     <article
       class="absolute left-3 bottom-44 md:bottom-60 lg:bottom-32 lg:left-[140px] flex flex-col items-start gap-3"
