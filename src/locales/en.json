@@ -32,9 +32,9 @@
     "description": "The ecosystem includes many projects and products developed by the community",
     "projects": {
       "familyInfo": "A family tree where you can track almost all the preserved information about your genus. Executed on its own blockchain with secure data encryption.",
-      "gameInfo": "Lineage II is a massively multiplayer online role-playing game (MMORPG) for Microsoft Windows and the second game in the Lineage series. It is a prequel to Lineage and is set 150 years before the first game",
-      "explorerInfo": "Internet Explorer (formerly Microsoft Internet Explorer and Windows Internet Explorer, commonly abbreviated IE or MSIE) is a discontinued series of graphical web browsers developed by Microsoft which was used in the Windows line of operating systems ",
-      "dexInfo": "Decentralized Exchanges (DEXes) – are a new technology that facilitate cryptocurrency trading on a distributed ledger. The meaning of «decentralized exchange» is that instead of the one platform that process trades, it is engaged in blockchain"
+      "gameInfo": "A game on the blockchain, for investment, entertainment and recreation.",
+      "explorerInfo": "The official Arbor blockchain explorer, where you can track any transaction within the network.",
+      "dexInfo": "A web, desktop and mobile application with rich digital asset management functionality and a built-in exchange."
     }
   },
   "aboutUs": {

@@ -23,10 +23,12 @@ import treeImg from '@/assets/tree.png';
     <div
       class="absolute bottom-[60px] lg:bottom-0 left-4 md:left-5 lg:left-[140px] w-72 h-20 border border-green-400 rounded-full blur-sm"
     ></div>
-    <button
-      class="hover:bg-green-50 text-2xl text-slate-700 absolute bottom-[68px] lg:bottom-2 left-8 md:left-9 lg:left-[155px] w-64 h-16 bg-green-400 rounded-full blur-none"
-    >
-      {{ $t('aboutPlatform.try') }}
-    </button>
+    <a href="https://dex.arborplatform.com/">
+      <button
+        class="hover:bg-green-50 text-2xl text-slate-700 absolute bottom-[68px] lg:bottom-2 left-8 md:left-9 lg:left-[155px] w-64 h-16 bg-green-400 rounded-full blur-none"
+      >
+        {{ $t('aboutPlatform.try') }}
+      </button>
+    </a>
   </main>
 </template>

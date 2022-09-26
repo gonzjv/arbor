@@ -21,7 +21,7 @@ const SOCIAL_NETWORKS = [
   {
     title: 'Medium',
     img: logoMedium,
-    link: 'https://github.com/Arbor-platform',
+    link: 'https://medium.com/@Arborplatform',
     style:
       'flex justify-center items-center h-1/3 md:h-full md:w-1/3 bg-green-800 hover:bg-green-400',
   },
