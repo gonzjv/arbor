@@ -1,13 +1,15 @@
 <script setup>
-import Tree from './svg/Tree.vue';
+import treeSvg from '@/assets/arbor-tree.svg';
 </script>
 <template>
   <main
     class="h-[600px] md:h-[680px] relative overflow-x-hidden lg:overflow-visible"
   >
-    <Tree
+    <object
       class="absolute min-w-[300px] w-[300px] md:w-[700px] xl:w-[950px] bottom-72 md:bottom-20 xl:-bottom-32 -right-24 md:-right-56 lg:-right-0 z-0"
-    />
+      type="image/svg+xml"
+      :data="treeSvg"
+    ></object>
     <article
       class="absolute left-3 bottom-44 md:bottom-60 lg:bottom-32 lg:left-[140px] flex flex-col items-start gap-3"
     >
