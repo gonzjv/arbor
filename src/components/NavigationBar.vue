@@ -113,7 +113,7 @@ const togglePopup = () => {
             {{ $t(nav.title) }}
             <div
               v-if="nav.displayDots"
-              class="absolute -bottom-[2px] left-0 w-full h-2 flex"
+              class="absolute -bottom-[1.5px] left-0 w-full h-2 flex"
             >
               <div
                 class="border-b-2 border-green-400 w-1/3"
