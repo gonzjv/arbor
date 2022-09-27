@@ -7,7 +7,7 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/arbor/',
+  base: '/',
   plugins: [
     vue(),
     vueI18n({
