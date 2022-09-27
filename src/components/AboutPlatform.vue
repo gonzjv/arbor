@@ -17,7 +17,9 @@ import treeSvg from '@/assets/arbor-tree.svg';
     <article
       class="absolute left-3 bottom-44 md:bottom-60 lg:bottom-32 lg:left-[140px] flex flex-col items-start gap-3"
     >
-      <h2 class="text-4xl md:text-5xl text-left">
+      <h2
+        class="text-4xl md:text-5xl font-bold text-left"
+      >
         ARBOR PLATFORM
       </h2>
       <p class="md:w-96 text-left text-lg">
