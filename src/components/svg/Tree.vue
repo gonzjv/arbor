@@ -2,6 +2,7 @@
 import { onMounted } from 'vue';
 
 onMounted(() => {
+  console.log('MOUNTED');
   !(function (t, n) {
     'object' == typeof exports &&
     'undefined' != typeof module
